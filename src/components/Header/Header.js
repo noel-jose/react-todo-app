@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import Button from "../Button/Button";
 
 const Header = ({ title, onAdd, showAddTask }) => {
-    const onClick = (e) => {
-        console.log("Click");
-    };
+    // const onClick = (e) => {
+    //     console.log("Click");
+    // };
 
     return (
         <header className="header">
