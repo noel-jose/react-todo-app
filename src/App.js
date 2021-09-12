@@ -18,7 +18,7 @@ function App() {
 
     //Fetching Tasks
     const fetchTask = async () => {
-        const res = await fetch("http://localhost:5000/tasks");
+        const res = await fetch("https://fake-server-noel.herokuapp.com/tasks");
         const data = await res.json();
 
         return data;
@@ -26,7 +26,7 @@ function App() {
 
     //Fetching  a Task
     const fetchaTask = async (id) => {
-        const res = await fetch(`http://localhost:5000/tasks/${id}`);
+        const res = await fetch(`https://fake-server-noel.herokuapp.com/tasks/${id}`);
         const data = await res.json();
 
         return data;
@@ -34,7 +34,7 @@ function App() {
 
     // Delete task
     const deleteTask = async (id) => {
-        await fetch(`http://localhost:5000/tasks/${id}`, {
+        await fetch(`https://fake-server-noel.herokuapp.com/tasks/${id}`, {
             method: "DELETE",
         });
         console.log("delete", id);
@@ -46,7 +46,7 @@ function App() {
         const taskToToggle = await fetchaTask(id);
         const upTask = { ...taskToToggle, reminder: !taskToToggle.reminder };
 
-        const res = await fetch(`http://localhost:5000/tasks/${id}`, {
+        const res = await fetch(`https://fake-server-noel.herokuapp.com/tasks/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-type": "application/json",
