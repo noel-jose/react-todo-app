@@ -11,4 +11,4 @@ A Todo app that is created using React Js
 
 ## Deployment
 
-To view the deployment <a href = "https://react-todo-noel.netlify.app/">click here</a>
+To view the deployment <a href = "https://react-todo-noel.netlify.app/" target="_blank">click here</a>
