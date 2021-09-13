@@ -26,13 +26,13 @@ function App() {
 
     //Fetching  a Task
     const fetchaTask = async (id) => {
-<<<<<<< HEAD
         const res = await fetch(
             `https://fake-server-noel.herokuapp.com/tasks/${id}`
         );
-=======
-        const res = await fetch(`https://fake-server-noel.herokuapp.com/tasks/${id}`);
->>>>>>> 95e7af3b1a58792edc41a3405e572b80872d2f76
+        const res = await fetch(
+            `https://fake-server-noel.herokuapp.com/tasks/${id}`
+        );
+
         const data = await res.json();
 
         return data;
@@ -52,7 +52,6 @@ function App() {
         const taskToToggle = await fetchaTask(id);
         const upTask = { ...taskToToggle, reminder: !taskToToggle.reminder };
 
-<<<<<<< HEAD
         const res = await fetch(
             `https://fake-server-noel.herokuapp.com/tasks/${id}`,
             {
@@ -63,15 +62,6 @@ function App() {
                 body: JSON.stringify(upTask),
             }
         );
-=======
-        const res = await fetch(`https://fake-server-noel.herokuapp.com/tasks/${id}`, {
-            method: "PATCH",
-            headers: {
-                "Content-type": "application/json",
-            },
-            body: JSON.stringify(upTask),
-        });
->>>>>>> 95e7af3b1a58792edc41a3405e572b80872d2f76
 
         const data = await res.json();
 
@@ -85,7 +75,6 @@ function App() {
 
     // Add task
     const addTask = async (task) => {
-<<<<<<< HEAD
         const res = await fetch(
             "https://fake-server-noel.herokuapp.com/tasks",
             {
@@ -96,15 +85,6 @@ function App() {
                 body: JSON.stringify(task),
             }
         );
-=======
-        const res = await fetch("https://fake-server-noel.herokuapp.com/tasks", {
-            method: "POST",
-            headers: {
-                "Content-type": "application/json",
-            },
-            body: JSON.stringify(task),
-        });
->>>>>>> 95e7af3b1a58792edc41a3405e572b80872d2f76
 
         const data = await res.json();
 
