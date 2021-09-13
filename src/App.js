@@ -29,9 +29,6 @@ function App() {
         const res = await fetch(
             `https://fake-server-noel.herokuapp.com/tasks/${id}`
         );
-        const res = await fetch(
-            `https://fake-server-noel.herokuapp.com/tasks/${id}`
-        );
 
         const data = await res.json();
 
